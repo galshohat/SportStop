@@ -3,7 +3,8 @@ const router = express.Router()
 const Category = require('../models/category.js')
 
 router.post('/', async (req, res) => {
-    const category = new Category({
+    
+    let category = new Category({
         name: req.body.name,
         icon: req.body.icon,
         colors: req.body.colors

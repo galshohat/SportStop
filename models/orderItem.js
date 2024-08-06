@@ -11,5 +11,5 @@ const orderItemSchema = mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Order', orderItemSchema)
+module.exports = mongoose.model('OrderItem', orderItemSchema)
 

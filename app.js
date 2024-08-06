@@ -14,6 +14,7 @@ const api = process.env.URL
 const productsRouter = require('./routers/products.js')
 const usersRouter = require('./routers/users.js')
 const categoriesRouter = require('./routers/categories.js')
+const ordersRouter = require('./routers/orders.js')
 
 app.use(cors())
 app.options('*', cors())
@@ -28,6 +29,7 @@ app.use(errorHandler)
 app.use(`${api}/products`, productsRouter)
 app.use(`${api}/users`, usersRouter)
 app.use(`${api}/categories`, categoriesRouter)
+app.use(`${api}/orders`, ordersRouter)
 
 
 

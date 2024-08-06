@@ -7,8 +7,8 @@ const mongoose = require('mongoose')
 
 
 router.post('/signup', async (req, res) => {
-    
-    const user = new User({
+
+    let user = new User({
         name: req.body.name,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 5),
