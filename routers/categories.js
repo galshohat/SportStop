@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router()
-const {Category} = require('../models/category.js')
+const Category = require('../models/category.js')
 
 router.post('/', async (req, res) => {
     const category = new Category({
@@ -43,6 +43,5 @@ router.put('/:id', async (req,res) => {
     res.send(category)
 })
 
-router.delete('/', re )
 
 module.exports = router

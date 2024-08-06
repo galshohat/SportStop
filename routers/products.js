@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router()
-const {Product} = require('../models/products.js')
+const Product = require('../models/products.js')
 const { Category } = require("../models/category.js")
 const mongoose = require('mongoose')
 

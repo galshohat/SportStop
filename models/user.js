@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const userSchema = mongoose.Schema({
+const userSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -44,5 +44,5 @@ userSchema.set('toJSON', {
     virtuals: true
 })
 
-exports.Users = mongoose.model('Users', userSchema)
+module.exports = mongoose.model('Users', userSchema)
 
