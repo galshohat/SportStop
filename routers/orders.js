@@ -42,7 +42,7 @@ router.post('/', async (req, res) => {
     }))
 
     totalPrice = totalPrice.reduce((x,y) => x+y, 0)
-    
+
     let order = new Order({
         orderItems: orderItemsPromise,
         shippingAddress: req.body.shippingAddress,
@@ -94,6 +94,17 @@ router.delete('/:id', (req, res) => {
         return res.status(500).json({success: false, error: err})
     })
 })
+
+router.get('/user/:id', async (req, res) => {
+    const userOrderHistory = await Order.find({user: req.params.id})
+    .populate({path: 'orderItems', populate: {path: 'product', populate: 'category'}})
+    .sort({'orderDate': -1})
+    
+    // if !category
+
+    res.send(userOrderHistory)
+})
+
 
 
 module.exports = router
