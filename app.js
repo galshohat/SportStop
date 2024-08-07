@@ -24,6 +24,7 @@ app.use(bodyParser.json())
 app.use(morgan('tiny'))
 app.use(auth())
 app.use(errorHandler)
+app.use('/uploads', express.static(__dirname +'/uploads'))
 
 // routers
 app.use(`${api}/products`, productsRouter)

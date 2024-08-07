@@ -14,7 +14,8 @@ function auth() {
             '/',
             '/api/v1/users/login',
             '/api/v1/users/signup',
-            {url: /\/api\/v1\/products(.*)/ , methods: ['GET', 'OPTIONS']}
+            {url: /\/api\/v1\/products(.*)/ , methods: ['GET', 'OPTIONS']},
+            {url: /\/uploads(.*)/ , methods: ['GET', 'OPTIONS']}
         ]
     })
 }
