@@ -1,0 +1,54 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  font-family: "Monospace", sans-serif; /* Updated font family */
+}
+
+.navbar-logo {
+  height: 60px; /* Increased height for a bigger logo */
+  margin-right: 20px;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  font-family: "Monospace", sans-serif; /* Updated font family */
+}
+
+.suggestion-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.search-input .MuiOutlinedInput-root {
+  height: 40px; /* Adjust the height as needed */
+  border: 1px solid #fff; /* White outline */
+}
+
+.search-input .MuiOutlinedInput-notchedOutline {
+  border-color: white; /* White outline for the notched outline */
+}
+
+.search-input .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: white; /* White outline on focus */
+}
+
+.button {
+  font-family: "Monospace", sans-serif; /* Updated font family */
+  text-transform: none; /* Prevent uppercase transformation */
+}
+
+.nav-button:hover {
+  border: 1px solid white;
+}

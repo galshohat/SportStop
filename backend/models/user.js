@@ -32,6 +32,18 @@ const userSchema = new mongoose.Schema({
     isAdmin: {
         type: Boolean,
         default: false
+    },
+    balance: {
+        type: Number,
+        default: 0
+    },
+    cuurency: {
+        type: String,
+        default: "₪"
+    },
+    profilePicture: {
+        type: String,
+        required: true
     }
 })
 

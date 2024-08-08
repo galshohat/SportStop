@@ -16,7 +16,8 @@ router.post('/signup', async (req, res) => {
         isAdmin: req.body.isAdmin,
         street: req.body.street,
         city: req.body.city,
-        country: req.body.country
+        country: req.body.country,
+        profilePicture: req.body.profilePicture
     })
     
 
@@ -93,10 +94,10 @@ router.put('/:id', async (req,res) => {
             email: req.body.email,
             password: req.body.password,
             phone: req.body.phone,
-            isAdmin: req.body.isAdmin,
             street: req.body.street,
             city: req.body.city,
-            country: req.body.country
+            country: req.body.country,
+            profilePicture: req.body.profilePicture
         },
         { new : true }
     )

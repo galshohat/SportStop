@@ -6,9 +6,9 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const auth = require('./jwt.js')
 const errorHandler = require('./error-handler.js')
-
 require("dotenv/config")
-const port = 3000
+
+const port = 8000
 const api = process.env.URL
 
 const productsRouter = require('./routers/products.js')
