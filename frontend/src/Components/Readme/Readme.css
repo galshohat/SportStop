@@ -1,0 +1,110 @@
+.readme-container {
+    padding: 30px;
+    max-width: 1000px; 
+    margin: auto;
+    background-color: #d8d8d8;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    margin-top: 10vh;
+  }
+  
+  .readme-container h1 {
+    text-align: center;
+    font-size: 3rem; 
+    color: #2b2d42;
+    margin-bottom: 25px;
+  }
+  
+  .section {
+    margin: 25px 0;
+    padding: 20px;
+    border-radius: 8px;
+    background: #edf2f4;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #d3d3d3;
+  }
+  
+  .section:hover {
+    background: #e2e6f0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section h2 {
+    margin: 0;
+    font-size: 2rem; 
+    color: #2b2d42;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .section p,
+  .section ul {
+    margin-top: 15px;
+    font-size: 1.2rem; 
+    color: #4a4a4a;
+    line-height: 1.8;
+  }
+  
+  .section ul {
+    list-style-type: disc;
+    padding-left: 25px;
+  }
+  
+  .section ul li {
+    margin-bottom: 12px;
+  }
+  
+  .section p {
+    white-space: pre-wrap;
+  }
+  
+  .section p strong {
+    color: #ef233c;
+  }
+  
+  .section h2::after {
+    content: '+';
+    font-size: 1.8rem;
+    color: #2b2d42;
+    transition: transform 0.3s ease;
+  }
+  
+  .section.open h2::after {
+    transform: rotate(45deg);
+  }
+  
+  .readme-container .active {
+    background-color: #d8e3f0;
+  }
+  
+  .readme-container .close {
+    background-color: #edf2f4;
+  }
+  
+  .scrollable-content {
+    overflow-y: auto;
+    max-height: 90vh;
+    padding-right: 15px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .readme-container {
+      padding: 15px;
+    }
+  
+    .readme-container h1 {
+      font-size: 2.5rem;
+    }
+  
+    .section h2 {
+      font-size: 1.7rem;
+    }
+  
+    .section p,
+    .section ul {
+      font-size: 1rem;
+    }
+  }

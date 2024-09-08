@@ -1,0 +1,213 @@
+:root {
+    --main-bg-color: rgb(25, 118, 210);
+    --second-bg-color: rgb(43, 159, 226);
+    --input-width: 40vw;
+    --input-height: 5vh;
+    --label-font-size: 1rem;
+    --icon-font-size: 1.5rem;
+    --container-padding: 4vh;
+    --header-font-size: 5vh;
+    --subheader-font-size: 2.5vh;
+    --btn-padding: 1.5vh 1vw;
+    --btn-radius: 0.8vh;
+    --table-width: 95vw;
+    --table-padding: 2vh;
+    --table-margin-bottom: 1vh;
+    --table-border-radius: 0.8vh;
+    --search-bar-width: 50vw; 
+    --search-bar-padding: 1.5vh;
+    --search-bar-font-size: 2.5vh;
+    --search-bar-margin-bottom: 4vh; 
+}
+
+.table-action-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-container {
+    padding: var(--container-padding);
+    font-family: "Arial", sans-serif;
+    position: relative; 
+    margin-top: 10vh;
+}
+
+.category-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--table-margin-bottom);
+    position: relative;
+    align-items: flex-start; 
+}
+
+.category-header h1 {
+    margin: 0;
+    font-size: var(--header-font-size);
+    text-align: left; 
+}
+
+.category-header p {
+    margin-top: 1vh;
+    color: #666;
+    font-size: var(--subheader-font-size);
+    text-align: left;
+}
+
+.add-new-btn {
+    background-color: var(--main-bg-color);
+    color: #fff;
+    padding: var(--btn-padding);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: var(--btn-radius);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.add-new-btn:hover {
+    background-color: var(--second-bg-color);
+}
+
+.add-new-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
+}
+
+.category-search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--search-bar-margin-bottom); 
+}
+
+.category-search input {
+    width: var(--search-bar-width);
+    padding: var(--search-bar-padding);
+    border: 2px solid #bebebe;
+    border-radius: var(--btn-radius);
+    font-size: var(--search-bar-font-size);
+    text-align: left;
+}
+
+.category-search input:focus {
+    border: 2px solid black;
+    outline: none;
+}
+
+.category-table {
+    width: 100%; 
+    max-width: var(--table-width); 
+    border-collapse: collapse;
+    margin: 0 auto;
+    border-radius: var(--table-border-radius);
+    word-wrap: break-word;
+    table-layout: fixed; 
+}
+
+.category-table th,
+.category-table td {
+    padding: var(--table-padding);
+    border-bottom: 1px solid #ccc;
+    overflow-wrap: break-word; 
+    white-space: normal; 
+    text-align: center;
+    vertical-align: middle; 
+}
+
+.category-table th {
+    background-color: #f5f5f5;
+    white-space: nowrap; 
+}
+
+.category-table td {
+    white-space: normal;
+    word-break: normal; 
+    min-width: 50px;
+    max-width: 300px;
+}
+
+.highlighted-row {
+    animation: highlight-animation 1s ease;
+  }
+  
+  @keyframes highlight-animation {
+    0% {
+      background-color: yellow;
+    }
+    100% {
+      background-color: inherit;
+    }
+  }
+
+.action-buttons-cell {
+    text-align: center; 
+    width: 80px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.action-btn,
+.delete-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    font-size: var(--icon-font-size);
+    cursor: pointer;
+}
+
+.no-categories {
+    text-align: center;
+    font-size: 3vh;
+    color: #666;
+    margin-top: 5vh;
+}
+
+.pagination-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: var(--table-width);
+    margin-top: 1vh; 
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pagination-btn {
+    background-color: var(--main-bg-color);
+    color: white;
+    padding: 1.5vh 1.5vw;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0.8vh;
+    margin-left: 0.5vw;
+}
+
+.pagination-btn.disabled {
+    background-color: lightgray;
+    cursor: not-allowed;
+}
+
+.page-info {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+.pagination-btn:hover:not(.disabled) {
+    background-color: var(--second-bg-color);
+}
+
+.delete-btn-container {
+   text-align: center;
+}

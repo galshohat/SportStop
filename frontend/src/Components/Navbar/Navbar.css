@@ -1,0 +1,101 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  font-family: "Monospace", sans-serif;
+}
+
+.navbar-logo {
+  height: 60px;
+  margin-right: 20px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+.navbar-logo:hover {
+  border: 1px solid white;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  font-family: "Monospace", sans-serif;
+  justify-content: end;
+}
+
+.suggestion-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.search-input .MuiOutlinedInput-root {
+  height: 40px;
+  border: 1px solid #fff;
+}
+
+.search-input .MuiOutlinedInput-notchedOutline {
+  border-color: white;
+}
+
+.search-input .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: white;
+}
+
+.button {
+  font-family: "Monospace", sans-serif;
+  text-transform: none;
+}
+
+.admin-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.admin-nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  gap: 30px; 
+  border-radius: 10px;
+}
+
+.nav-button {
+  text-transform: none;
+  border: 1px solid transparent;
+  padding: 8px 16px;
+  white-space: nowrap;
+  border-radius: 10px;
+}
+
+.nav-button:hover {
+  border: 1px solid white;
+}
+
+header.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation4.MuiAppBar-root.MuiAppBar-colorPrimary.MuiAppBar-positionStatic.css-hip9hq-MuiPaper-root-MuiAppBar-root {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  z-index: 1000;
+}
+
+.css-1m4sogg {
+  max-width: 35vw !important;
+  margin-left: 15vw;
+}
+
+.css-1tcrshw {
+  gap: 1vw;
+}

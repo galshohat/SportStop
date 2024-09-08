@@ -1,0 +1,116 @@
+.paymentForm {
+    display: flex;
+    justify-content: row;
+    gap: 5vw;
+}
+  
+.cartSummary {
+    width: 45%;
+    margin-right: 40px;
+}
+  
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+  
+.total {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.paymentImage {
+    margin-top: 20px;
+    width: 70%;
+    height: auto;
+}
+  
+.paymentDetails {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.paymentDetails label {
+    display: block;
+    margin-bottom: 8px; 
+    font-weight: bold;
+}
+
+.paymentDetails input {
+    width: 93%;
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payButton {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid transparent;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payButton:hover {
+    background-color: #0056b3;
+}
+
+.payButton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.thankYouMessage {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2vh;
+    max-width: 50vw;
+}
+
+.shippedImage {
+    margin-bottom: 2vh;
+    width: 20%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.verticalLine {
+    width: 2px;
+    background-color: #ccc;
+    height: auto;
+}
+
+.billingAddressContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2vh;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.infoButton {
+    margin-left: 10px;
+    padding: 6px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0 !important;
+}
+
+.infoButton:hover {
+    background-color: #0056b3;
+}

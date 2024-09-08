@@ -1,0 +1,67 @@
+.edit-status {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.status-label {
+  font-weight: bold;
+  color: var(--text-color, #333); /* Customize this color as needed */
+}
+
+/* Container for the select input */
+.status-select {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid var(--border-color, #ccc);
+  border-radius: 4px;
+  width: 30%;
+  margin-top: 1vh;
+  text-align: center;
+  position: relative;
+  background-color: var(--background-color, #fff);
+}
+
+/* Style the select element */
+.status-select select {
+  width: 30%;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 1rem;
+  color: var(--text-color, #333);
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+/* Style the options within the select dropdown */
+.status-select option {
+  padding: 5px;
+  font-size: 1rem;
+  color: var(--text-color, #333);
+}
+
+/* Optional: Add an icon or arrow to indicate the dropdown */
+.status-select::after {
+  content: "▼"; /* Unicode for a down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 1rem;
+  color: var(--text-color, #333);
+}
+
+.highlighted-row {
+  animation: highlight-animation 1s ease;
+}
+
+@keyframes highlight-animation {
+  0% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: inherit;
+  }
+}

@@ -1,0 +1,116 @@
+:root {
+    --main-bg-color: rgb(25, 118, 210);
+    --second-bg-color: rgb(0, 166, 255);
+    --button-padding: 0.75rem 1.5rem;
+    --button-font-size: 1rem;
+    --image-preview-size: 300px;
+    --image-preview-gap: 2vw;
+}
+
+
+.image-preview-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.main-image-section {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    flex-direction: column;
+}
+
+
+.additional-images-section {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    flex-direction: column;
+}
+
+.image-preview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4vh;
+}
+
+.image-preview, .additional-image-preview {
+    width: 250px; 
+    height: 250px; 
+    object-fit: cover; 
+    border: 3px solid #ccc; 
+    border-radius: 8px;
+    overflow: hidden; 
+    box-sizing: border-box; 
+}
+
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.carousel-arrow {
+    background-color: var(--main-bg-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+.carousel-arrow:focus{
+    box-shadow: none;
+    outline: none;
+}
+.carousel-arrow.disabled {
+    background-color: #ccc; 
+    cursor: not-allowed;
+}
+
+.carousel-arrow:not(.disabled):hover {
+    background-color: var(--second-bg-color);
+}
+
+
+.delete-button {
+    background-color: var(--main-bg-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.delete-button:hover {
+    background-color: var(--second-bg-color);
+}
+
+.delete-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
+}
+
+.delete-button.disabled {
+    background-color: #ccc; 
+    cursor: not-allowed;
+    color: white;
+}
+
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 2vh;
+}

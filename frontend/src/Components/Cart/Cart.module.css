@@ -1,0 +1,209 @@
+.cartContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+    margin: 5vh auto;
+  }
+  
+  .shoppingCartTitle {
+    font-size: 2.5rem;
+    margin-bottom: 5vh;
+    align-self: flex-start;
+  }
+  
+  .cartContent {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .cartItems {
+    width: 55%;
+    border-top: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+  
+  .cartItem {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 1vh 0;
+  }
+  
+  .cartItemImage {
+    width: 8vw;
+    height: auto;
+    object-fit: cover;
+    margin-right: 2vw;
+    border-radius: 10px;
+  }
+  
+  .cartItemDetails {
+    flex-grow: 1;
+  }
+  
+  .cartItemDetails h2 {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+  }
+  
+  .cartItemDetails p {
+    margin: 5px 0;
+  }
+  
+  .removeItemBtn,
+  .editItemBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .orderSummary {
+    width: 40%;
+    padding: 1vh;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    height: auto;
+    max-height: 45vh;
+  }
+  
+  .orderSummary h2 {
+    font-size: 1.8rem;
+    text-align: start;
+    margin-top: 1vh;
+    font-weight: normal;
+    margin-bottom: 1vh;
+  }
+  
+  .orderSummaryLine {
+    height: 1px;
+    background-color: #ccc;
+    margin: 2.5vh 0;
+  }
+  
+  .orderSummaryTotal {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    margin-bottom: 1vh;
+  }
+  
+  .orderSummaryTotal span:last-child {
+    font-weight: bold;
+  }
+  
+  .discountSummary {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    color: #28a745;
+    font-weight: bold;
+    margin-bottom: 1vh;
+  }
+  
+  .discountedPrice {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    margin-bottom: 1vh;
+    color: #28a745;
+    font-weight: bold;
+  }
+  
+  .originalPrice {
+    text-decoration: line-through;
+    color: #777;
+  }
+  
+  .checkoutBtn {
+    background-color: black !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 1vh !important;
+    font-size: 1.1rem !important;
+    border-radius: 20px !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    margin-top: 5vh !important;
+    text-transform: none !important;
+  }
+  
+  .checkoutBtn:hover {
+    background-color: rgb(50, 50, 50) !important;
+  }
+  
+  .emptyCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+  }
+  
+  .emptyCart img {
+    width: 20vw;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 2vh;
+  }
+  
+  .emptyCart p {
+    font-size: 1.5rem;
+    color: #666;
+  }
+  
+  .orderSummaryPoints {
+    font-size: 1.2rem;
+    margin-top: 4vh;
+    font-weight: bold;
+  }
+  
+  .couponSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 4vh;
+  }
+  
+  .couponLabel {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .couponInput {
+    padding: 8px 12px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .couponSubmitBtn {
+    background-color: #039be5;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .couponSubmitBtn:hover {
+    background-color: #0288d1;
+  }
+  
+  .couponValid {
+    border-color: green;
+    box-shadow: 0 0 5px green;
+  }
+  
+  .couponInvalid {
+    border-color: red;
+    box-shadow: 0 0 5px red;
+  }

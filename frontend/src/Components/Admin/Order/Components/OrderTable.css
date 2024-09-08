@@ -1,0 +1,27 @@
+.status-header {
+    position: relative;
+  }
+  
+  .filter-icon {
+    cursor: pointer;
+  }
+  
+  .status-filter-dropdown {
+    position: relative;
+    text-align: start;
+    top: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 1vh;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  .status-filter-dropdown label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }

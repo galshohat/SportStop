@@ -1,0 +1,34 @@
+.profile-image-popup-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.popup-loading {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.roomy-profile-options img {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 10%;
+  transition: transform 0.2s;
+}
+
+.roomy-profile-options img:hover {
+  transform: scale(1.1);
+}
+
+.profile-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 15px;
+}

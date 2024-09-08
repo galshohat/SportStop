@@ -1,0 +1,234 @@
+:root {
+  --main-bg-color: rgb(25, 118, 210);
+  --second-bg-color: rgb(0, 166, 255);
+  --form-border-color: #e0e0e0;
+  --form-input-height: 4vh;
+  --form-label-font-size: 1rem;
+  --form-input-width: 20vw;
+  --form-margin-bottom: 1.5rem;
+  --form-row-gap: 7vw;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.form-row {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--form-row-gap);
+}
+
+.form-row:not(:first-child) {
+  border-bottom: 1.5px solid var(--form-border-color);
+  padding-bottom: 1vh;
+}
+
+.form-group {
+  position: relative;
+  width: calc(50% - var(--form-row-gap) / 2);
+  margin-bottom: var(--form-margin-bottom);
+}
+
+.form-label {
+  font-size: var(--form-label-font-size);
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 4.5vh;
+  cursor: text;
+  font-family: Arial, sans-serif;
+  transition: 0.3s ease-in-out;
+}
+
+.checkbox-label-class {
+  font-size: var(--form-label-font-size);
+  color: #333;
+  position: absolute;
+  left: 0;
+  cursor: text;
+  font-family: Arial, sans-serif;
+  transition: 0.3s ease-in-out;
+}
+
+.form-input {
+  width: 100%;
+  border: 0;
+  height: var(--form-input-height);
+  background-color: transparent;
+  border-bottom: 0.2rem solid #bababa;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  transition: border-bottom 0.3s ease-in-out;
+  margin-top: 2vh;
+}
+
+.form-input:focus,
+.form-input:not(:placeholder-shown) {
+  outline: none;
+  border-bottom: 0.2rem solid black;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  font-size: 1rem;
+  font-weight: bold;
+  left: 0;
+  top: 0.25vh;
+  pointer-events: none;
+}
+
+.form-checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0;
+  gap: 0.5rem;
+  position: relative;
+  width: calc(50% - var(--form-row-gap) / 2);
+}
+
+.form-checkbox {
+  width: 1.2rem;
+  height: 1.2rem;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #bababa;
+  border-radius: 0.2rem;
+  outline: none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.form-checkbox:checked {
+  background-color: var(--main-bg-color);
+  border-color: var(--main-bg-color);
+  color: white;
+}
+
+.form-checkbox:checked::before {
+  content: "✔";
+  display: block;
+  font-size: 0.8rem;
+  text-align: center;
+  color: white;
+}
+
+.form-checkbox-label {
+  font-size: var(--form-label-font-size);
+  cursor: pointer;
+}
+
+.form-checkbox-message {
+  position: absolute;
+  font-size: 0.7rem;
+  color: #666;
+  margin-top: 6vh;
+}
+
+.form-submit-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-submit-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--main-bg-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  width: auto;
+  margin-top: 1.5rem;
+}
+
+.form-submit-btn:hover {
+  background-color: var(--second-bg-color);
+}
+
+.form-submit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
+}
+
+.form-category-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 15vh;
+}
+
+.category-scrollbox {
+  overflow-y: auto;
+  max-height: 10vh;
+  margin-top: 3vh;
+  padding: 1vh 1vw;
+  border: 1px solid #bababa;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5vh;
+}
+
+.checkbox-input {
+  margin-right: 1vw;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+}
+
+.form-textarea {
+  width: 100%;
+  height: 8vh;
+  border: 0;
+  background-color: transparent;
+  border-bottom: 0.2rem solid #bababa;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  resize: none;
+  overflow-y: auto;
+  transition: border-bottom 0.3s ease-in-out;
+}
+
+.create-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+}
+
+.create-btn {
+  background-color: var(--main-bg-color);
+  color: white;
+  padding: 2vh 4vw;
+  border: none;
+  border-radius: 2vh;
+  cursor: pointer;
+  font-size: 2vh;
+  font-weight: bold;
+  outline: none;
+}
+
+.create-btn:hover {
+  background-color: var(--second-bg-color);
+}
+
+.create-btn:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}

@@ -1,0 +1,279 @@
+:root {
+  --main-bg-color: rgb(25, 118, 210);
+  --second-bg-color: rgb(43, 159, 226);
+  --input-height: 5vh;
+  --label-font-size: 1rem;
+  --icon-font-size: 1.5rem;
+  --tab-active-bg-color: #1976d2;
+  --tab-inactive-bg-color: #e0e0e0;
+  --tab-transition-duration: 0.4s;
+}
+
+.auth-page-body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1vw;
+}
+
+.half-width {
+  width: 48%; 
+}
+
+#email,
+#password,
+#phone,
+#country,
+#city,
+#street {
+  width: 70%;
+}
+
+#email-label,
+#password-label,
+#phone-label,
+#country-label,
+#city-label,
+#street-label {
+  left: 14%;
+}
+
+
+.optional-span {
+  position: absolute;
+  right: 1vw; 
+  top: 50%;
+  transform: translate(-90%, -50%); 
+  font-size: 0.9rem;
+  color: lightgray; 
+  font-style: italic;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15vh;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 55vw;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.auth-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  position: relative;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 1rem;
+  background-color: var(--tab-inactive-bg-color);
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  position: relative;
+  transition: background-color var(--tab-transition-duration) ease,
+    color var(--tab-transition-duration) ease;
+}
+
+.auth-tab:first-child {
+  border-radius: 25px 0 0 25px;
+}
+
+.auth-tab:last-child {
+  border-radius: 0 25px 25px 0;
+}
+
+.auth-tab.active {
+  background-color: var(--tab-active-bg-color);
+  color: white;
+}
+
+.auth-tab::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--tab-active-bg-color);
+  border-radius: 25px;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: transform var(--tab-transition-duration) ease;
+}
+
+.auth-tab.active::before {
+  transform: scaleX(1);
+}
+
+.auth-content {
+  width: 100%;
+  padding: 2rem;
+  padding-top: 0;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-input-holder {
+  margin-top: 5vh;
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.auth-details-input {
+  width: 35%;
+  border: 0;
+  height: var(--input-height);
+  background-color: transparent;
+  border-bottom: 0.2rem solid #bababa;
+  font-size: 1.1rem;
+  margin-bottom: 1vh;
+  transition: border-color 0.3s ease;
+}
+
+.auth-details-label {
+  position: absolute;
+  top: 0.5vw;
+  left: 32%;
+  display: flex;
+  align-items: center;
+  cursor: text;
+  transition: 0.3s ease-in-out;
+  font-size: var(--label-font-size);
+}
+
+.auth-details-input:focus,
+.auth-details-input:not(:placeholder-shown) {
+  outline: none;
+  border-bottom: 0.2rem solid var(--main-bg-color);
+}
+
+.auth-details-input:not(:placeholder-shown) + .auth-details-label,
+.auth-details-input:focus + .auth-details-label {
+  font-size: 1rem;
+  font-weight: bold;
+  top: -2vh;
+  pointer-events: none;
+}
+
+.email-validation-message,
+.password-validation-message {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1vh;
+}
+
+.auth-password-toggle-icon {
+  position: absolute;
+  top: 10%;
+  cursor: pointer;
+  font-size: var(--icon-font-size);
+  color: #555;
+  z-index: 1;
+}
+
+.auth-button:hover {
+  background-color: var(--second-bg-color);
+}
+
+.auth-button {
+  border-radius: 1rem;
+  background-color: var(--main-bg-color);
+  color: white;
+  font-weight: bold;
+  border: 0.1rem solid transparent;
+  width: 40%;
+  margin-left: 30%;
+  height: 5vh;
+  margin-top: 3vh;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#profile-picture-holder {
+  text-align: center;
+  margin-top: 2rem;
+}
+#remember-me{
+  margin-right: 10px;
+}
+#profile-image {
+  width: 10vw;
+  height: auto;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.validation-icon {
+  margin-right: 0.5vw;
+  font-size: 1rem;
+}
+
+.email-validation-message,
+.password-validation-message {
+  font-size: 0.9rem;
+  color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5vw;
+  margin-bottom: 0;
+}
+
+.email-validation-message.valid,
+.password-validation-message.valid {
+  color: green;
+}
+
+.email-validation-message.invalid,
+.password-validation-message.invalid {
+  color: red;
+}
+
+.email-validation-message.initial,
+.password-validation-message.initial {
+  color: lightgray;
+}
+
+.remember-me-holder {
+  display: flex;
+  align-items: center;
+  margin-top: 4vh;
+  justify-content: center;
+}
+
+.remember-me-checkbox {
+  margin-right: 0.5vw;
+  cursor: pointer;
+}
+
+.remember-me-label {
+  font-size: 1.1rem;
+  color: #333;
+  cursor: pointer;
+}

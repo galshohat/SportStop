@@ -1,0 +1,148 @@
+:root {
+  --main-bg-color: rgb(25, 118, 210);
+  --second-bg-color: rgb(0, 166, 255);
+}
+
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 1vh 3.5vw;
+  border-radius: 2vh;
+  width: auto;
+  max-width: 60vw; 
+  min-width: 25vw;
+  height: auto;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  transition: width 0.3s ease-in-out; 
+}
+
+.popup-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  text-align: start;
+  margin-top: 2vh;
+  white-space: normal;
+  word-wrap: break-word; 
+  word-break: break-word; 
+}
+
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3vh;
+  margin-top: 1vh;
+}
+
+
+.popup-title {
+  margin: 0;
+  font-size: 3.5vh;
+  word-wrap: break-word; 
+  word-break: break-word; 
+  white-space: normal;
+}
+
+.popup-close-btn {
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+  background: none;
+  border: none;
+  font-size: 2.5vh;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  z-index: 1001;
+}
+
+.popup-close-btn:hover {
+  color: #ff0000;
+  transform: scale(1.2);
+}
+
+.popup-body {
+  display: flex;
+  flex-direction: column;
+}
+.popup-content button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--main-bg-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 2vh;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+  background-color: rgb(43, 159, 226);
+}
+
+.popup-content button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
+}
+
+.roomy-popup .popup-content {
+  width: 80%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.roomy-popup .popup-title {
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.roomy-profile-options {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.roomy-profile-options img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.roomy-profile-options img:hover {
+  transform: scale(1.1);
+}
+
+p {
+  white-space: normal;
+  word-wrap: break-word; 
+  word-break: break-word; 
+}

@@ -1,0 +1,233 @@
+.edit-account-container {
+    display: flex;
+    max-width: 80vw; 
+    margin: 0 auto;
+    padding: 2vh;
+    margin-top: 10vh;
+}
+
+.profile-picture-container {
+    position: relative;
+    width: 15vw; 
+    height: 15vw; 
+    margin: 0 auto 2vh; 
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-picture {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.profile-edit-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem; 
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 50%;
+}
+
+.profile-picture-container:hover .profile-picture {
+    filter: brightness(0.5);
+}
+
+.profile-picture-container:hover .profile-edit-overlay {
+    opacity: 1;
+}
+
+.sidebar {
+    width: 25vw; 
+    background-color: #fff;
+    padding: 2vh; 
+    border-radius: 0.8rem; 
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1); 
+    margin-right: 2vw; 
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    padding: 1vh 1.5vw; 
+    margin-bottom: 1vh; 
+    color: #333;
+    text-decoration: none;
+    border-radius: 0.5rem; 
+    transition: background-color 0.3s;
+}
+
+.menu-item.active,
+.menu-item:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.account-details {
+    flex: 1;
+    background-color: #fff;
+    padding: 2vh; 
+    border-radius: 0.8rem; 
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1); 
+}
+
+.account-details h1 {
+    margin-bottom: 2vh; 
+    font-size: 2.4rem; 
+}
+
+.account-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-form label {
+    font-size: 1rem; 
+    color: #555;
+    margin-bottom: 0.5vh; 
+}
+
+.account-form input {
+    padding: 1vh 0.5vw; 
+    margin-bottom: 1.5vh;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem; 
+    font-size: 1rem; 
+    color: #333;
+    width: 70%;
+}
+
+.account-form input[readonly] {
+    background-color: #f1f1f1;
+    cursor: not-allowed;
+}
+
+.submit-btn {
+    padding: 1vh 1.5vw; 
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.submit-btn:disabled{
+  cursor: not-allowed;
+}
+
+.profile-picture-container {
+    position: relative;
+    width: 15vw; 
+    height: 15vw; 
+    margin: 0 auto 2vh;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.profile-picture {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.profile-edit-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem; 
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 50%;
+}
+
+.profile-picture-container:hover .profile-picture {
+    filter: brightness(0.5);
+}
+
+.profile-picture-container:hover .profile-edit-overlay {
+    opacity: 1;
+}
+
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.dialog-content {
+    background-color: #fff;
+    padding: 4vh; 
+    border-radius: 1.2rem; 
+    box-shadow: 0 0.8vh 1.6vh rgba(0, 0, 0, 0.2); 
+    width: 80%;
+    max-width: 60vw; 
+    text-align: center;
+}
+
+.dialog-content h2 {
+    margin-bottom: 3vh; 
+    font-size: 2.4rem;
+}
+
+.profile-options {
+    display: flex;
+    justify-content: space-around;
+    gap: 2vw; 
+    flex-wrap: wrap;
+}
+
+.profile-options img {
+    width: 7vw; 
+    height: 7vw; 
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-options img:hover {
+    transform: scale(1.1);
+}
+
+
+.password-input-container {
+    position: relative;
+    width: 100%;
+}

@@ -1,0 +1,70 @@
+.form-group {
+  position: relative;
+  margin-bottom: 2.5vh;
+  margin-top: 4vh; 
+  width: 100%;
+}
+
+.form-input {
+  width: 50%; 
+  padding: 0.5rem 0; 
+  border: 0;
+  height: var(--login-input-height);
+  background-color: transparent;
+  border-bottom: 0.2rem solid #bababa;
+  font-size: 1.2rem;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translateY(-50%); 
+  padding-left: 0.2rem; 
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+  font-size: var(--login-label-font-size);
+}
+
+.form-input:valid + .form-label,
+.form-input:focus + .form-label {
+  font-size: 1rem;
+  font-weight: bold;
+  top: -1vh; 
+  transform: none;
+  pointer-events: none;
+}
+
+.form-input:focus,
+.form-input:valid {
+  border-bottom: 0.2rem solid black;
+}
+
+.create-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+}
+
+.create-btn {
+  background-color: var(--main-bg-color);
+  color: white;
+  padding: 2vh 4vw;
+  border: none;
+  border-radius: 2vh;
+  cursor: pointer;
+  font-size: 2vh;
+  font-weight: bold;
+  outline: none;
+}
+
+.create-btn:hover {
+  background-color: var(--second-bg-color);
+}
+
+.create-btn:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}

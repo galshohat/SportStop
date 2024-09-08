@@ -1,0 +1,44 @@
+.edit-cart-item-modal {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.edit-cart-item-modal label {
+    font-weight: bold;
+    color: var(--text-color, #333);
+}
+
+.quantity-input {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid var(--border-color, #ccc);
+    border-radius: 10px;
+    width: 20%;
+    text-align: center;
+    margin-bottom: 16px; 
+}
+
+.size-select {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid var(--border-color, #ccc);
+    border-radius: 4px;
+    width: 40%;
+    text-align: center;
+    position: relative;
+}
+
+.size-select select {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    appearance: none;
+    font-size: 1rem;
+}
+
+.size-select option {
+    padding: 5px;
+    font-size: 1rem;
+}

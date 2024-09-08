@@ -1,0 +1,46 @@
+.questions-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    margin-top: 10vh;
+  }
+  
+  .questions-page-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .questions-list-paper {
+    width: 80%;
+    max-width: 1000px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .questions-list {
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  
+  .question-item {
+    padding: 10px;
+    margin: 5px 0;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .question-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .question-item .MuiListItemText-primary {
+    font-size: 1.1rem;
+    color: #555;
+  }

@@ -1,0 +1,345 @@
+.home-image-container {
+    width: 95vw;
+    height: 45vh;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+
+.home-page-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.header-text {
+    text-align: center;
+    margin: 3vh 0;
+    font-size: 5vh;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.categories-container {
+    padding: 0 4vw;
+    max-width: 95vw;
+}
+
+.category-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3vh;
+    border-bottom: 0.2vh solid lightgray;
+    padding-bottom: 2vh;
+}
+
+.category-row:last-child {
+    border-bottom: none;
+}
+
+.category-slide {
+    width: 48%;
+    padding: 0;
+    margin: 0;
+}
+
+.category-title {
+    font-size: 2.5vh;
+    margin-bottom: 2vh;
+    margin-top: 0;
+    text-align: left;
+}
+
+.category-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: visible;
+}
+
+.slide-arrow {
+    background: none;
+    border: none;
+    font-size: 3vh;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+    user-select: none;
+    padding: 1vw;
+    border-radius: 50%;
+    position: relative;
+}
+
+.left-arrow::after,
+.right-arrow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+    z-index: -1;
+}
+
+.left-arrow:focus:not(:hover)::after,
+.left-arrow:active:not(:hover)::after,
+.right-arrow:focus:not(:hover)::after,
+.right-arrow:active:not(:hover)::after {
+    width: 2.5rem;
+    height: 2.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-out, width 0.3s ease-out, height 0.3s ease-out;
+}
+
+.left-arrow:hover::after,
+.right-arrow:hover::after {
+    width: 2.5rem;
+    height: 2.5rem;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.right-arrow {
+    position: relative;
+}
+
+.product-cards {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1.5vw;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 0 1vw;
+    height: 50vh;
+    width: 100%; 
+}
+
+.product-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.product-card {
+    flex: 0 0 30.5%; 
+    height: 40vh;
+    padding-top: 1vh;
+    text-align: center;
+    border: 0.1vh solid lightgray;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, z-index 0.3s ease;
+    position: relative;
+    z-index: 10;
+}
+
+.product-card:hover {
+    overflow: visible;
+    transform: scale(1.1);
+    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.2);
+    
+}
+
+.product-image-container {
+    position: relative;
+    width: 10vw;
+    height: 30vh;
+    margin: 0 auto;
+    overflow: hidden; 
+    border-radius: 0.7rem;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.product-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    align-items: center;
+    opacity: 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.8);
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    opacity: 0.7;
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-btn {
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
+    width: 4vh;
+    height: 4vh;
+    transition: box-shadow 0.3s ease;
+}
+
+.product-btn:hover {
+    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.796);
+}
+
+.product-name {
+    font-size: 1.5vh !important;
+    text-align: left !important;
+    padding-left: 0.5vw;
+    margin-top: 1.5vh !important;
+}
+
+.product-price {
+    position: absolute;
+    font-size: 2vh;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 0.5vw;
+    bottom: 1.5vh;
+    margin-bottom: 0;
+}
+
+.filter-home-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+.filter-home-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
+  }
+  
+  .filter-header-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 1vw; 
+  }  
+
+.filter-home-buttons {
+    display: flex;
+    gap: 2vw; 
+}
+
+.filter-home-btn {
+    padding: 0.8vh 1.5vw; 
+    border: 1px solid lightgray; 
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.filter-home-btn.active {
+    background-color: var(--main-bg-color); 
+    color: white;
+}
+
+.filter-home-btn.active:hover {
+    background-color: var(--main-bg-color);
+}
+
+.selected-filters {
+    display: flex;
+    gap: 1vw;
+    margin-top: 1vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; 
+    margin-top: 2vh;
+}
+
+.filter-tag {
+    background-color: lightgray; 
+    color: black;
+    padding: 0.5vh 1vw;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.filter-tag button {
+    background: none;
+    border: none;
+    color: red; 
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.filter-home-options {
+    margin-top: 1vh;
+    background-color: #f9f9f9;
+    padding: 1vh;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    text-align: center;
+}
+
+.scrollbar {
+    display: flex;
+    gap: 1vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-home-option {
+    padding: 0.5vh 1vw;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-home-option.selected {
+    background-color: var(--main-bg-color);
+    color: white;
+}
+
+.filter-option:hover {
+    background-color: #d0d0d0;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}

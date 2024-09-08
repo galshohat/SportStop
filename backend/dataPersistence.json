@@ -1,0 +1,17 @@
+[
+  {
+    "id": "66db3fc9dda48e60fd5d0b9d",
+    "name": "gal",
+    "email": "e1@gmail.com",
+    "phone": "0544807886",
+    "street": "Dolev 70",
+    "city": "moshav Ge'alya",
+    "country": "Israel",
+    "stopPoints": 83,
+    "LoginActivity": [
+      "2024-09-06T20:45:58.776Z",
+      "2024-09-06T20:56:49.372Z"
+    ],
+    "cart": []
+  }
+]
